@@ -1,0 +1,273 @@
+.header {
+    background-color: #74c69d;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .heroBox {
+        max-width: 1065px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .heroTextBox {
+            p:nth-child(1) {
+                font-size: 7.2rem;
+                font-weight: bold;
+                -webkit-text-fill-color: rgba(255, 0, 0, 0);
+                -webkit-text-stroke: 1px rgba(27, 67, 50, 0.1);
+                letter-spacing: 2px;
+            }
+            h1:nth-child(2) {
+                font-size: 7.2rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                color: #1b4332;
+            }
+            p:nth-child(3) {
+                font-size: 7.2rem;
+                font-weight: bold;
+                -webkit-text-fill-color: rgba(255, 0, 0, 0);
+                -webkit-text-stroke: 1px rgba(27, 67, 50, 0.1);
+                letter-spacing: 2px;
+                margin-bottom: 3rem;
+            }
+
+            a {
+                background-color: #1b4332;
+                padding: 1rem 5.7rem;
+                color: #d9d9d9;
+                font-size: 2rem;
+                border-radius: 1.1rem;
+            }
+        }
+    }
+}
+.blogSection {
+    background-color: #d8f3dc;
+    .blogBox {
+        max-width: 1065px;
+        margin: 0 auto;
+        padding: 6rem 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.6rem;
+        .grid1 {
+            h2 {
+                font-size: 6rem;
+                font-weight: bold;
+                letter-spacing: 6.3px;
+                color: #1b4332;
+                margin-bottom: 1rem;
+            }
+            .line {
+                width: 60%;
+                height: 1px;
+                background-color: #d9d9d9;
+                margin-bottom: 2rem;
+            }
+            p {
+                color: #081c15;
+                font-size: 2.6rem;
+                font-style: italic;
+                font-weight: bold;
+                line-height: 30px;
+                letter-spacing: 0.75px;
+            }
+        }
+        .grid2 {
+            p {
+                color: #112a46;
+                text-align: justify;
+                font-family: Source Serif 4;
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 0.23px;
+            }
+            p:nth-child(1) {
+                margin-bottom: 1rem;
+            }
+        }
+        .grid3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p {
+                color: #112a46;
+                text-align: justify;
+                font-family: Source Serif 4;
+                font-size: 2rem;
+                line-height: 3rem;
+                letter-spacing: 0.23px;
+            }
+            .imgBox {
+                position: relative;
+                width: 100%;
+                height: 19.4rem;
+            }
+        }
+    }
+}
+.commuSection {
+    background-color: #081c15;
+    padding: 6rem 0;
+    .commuBox {
+        max-width: 1065px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2rem;
+        .imgBox {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+    }
+    .textBox {
+        h2 {
+            color: #a9c7ea;
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 1.75px;
+            padding-bottom: 2rem;
+        }
+        p {
+            color: #d9d9d9;
+            text-align: justify;
+            font-size: 2rem;
+            line-height: 2.9rem;
+            letter-spacing: 1.5px;
+        }
+    }
+}
+@media (max-width: 875px) {
+    .header {
+        .heroBox {
+            flex-direction: column;
+            .heroImgBox {
+                order: -99;
+            }
+        }
+    }
+    .blogSection {
+        .blogBox {
+            grid-template-columns: 1fr;
+            justify-content: center;
+            padding: 6rem 2rem;
+            .grid3 {
+                .imgBox {
+                    width: 34.5rem;
+                    margin: 0 auto;
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+    .commuSection {
+        padding: 6rem 2rem;
+        .commuBox {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media (max-width: 520px) {
+    .header {
+        .heroBox {
+            .heroTextBox {
+                p:nth-child(1),
+                h1:nth-child(2),
+                p:nth-child(3) {
+                    font-size: 6rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 435px) {
+    .header {
+        .heroBox {
+            .heroTextBox {
+                p:nth-child(1),
+                h1:nth-child(2),
+                p:nth-child(3) {
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+    .blogSection {
+        .blogBox {
+            .grid1 {
+                h2 {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    .commuSection {
+        .commuBox {
+            .imgBox {
+                height: 300px;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .header {
+        .heroBox {
+            .heroTextBox {
+                p:nth-child(1),
+                h1:nth-child(2),
+                p:nth-child(3) {
+                    font-size: 4.5rem;
+                }
+            }
+        }
+    }
+    .blogSection {
+        .blogBox {
+            .grid1 {
+                h2 {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+    .commuSection {
+        .commuBox {
+            .imgBox {
+                height: 280px;
+            }
+        }
+    }
+}
+@media (max-width: 335ps) {
+    .header {
+        .heroBox {
+            .heroTextBox {
+                p:nth-child(1),
+                h1:nth-child(2),
+                p:nth-child(3) {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    .blogSection {
+        .blogBox {
+            .grid1 {
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    .commuSection {
+        .commuBox {
+            .imgBox {
+                height: 280px;
+            }
+        }
+    }
+}
