@@ -4,19 +4,42 @@ import Image from 'next/image';
 import Hero from '../img/image 1.svg';
 import Blog from '../img/book.webp';
 import Commu from '../img/communaute.webp';
+import * as Motion from '@/lib/motion';
+import { fadeIn } from '@/lib/variants';
 
+const variants = (direction: string, delay: number) => {
+    return {
+        variants: fadeIn(direction, delay),
+        initial: 'hidden',
+        whileInView: 'show',
+        viewport: { once: true, amount: 0.7 },
+    };
+};
 export default function Home() {
     return (
         <>
             <header className={Styles.header}>
                 <div className={Styles.heroBox}>
                     <div className={Styles.heroTextBox}>
-                        <p>Qui monte à bord</p>
-                        <h1>Qui monte à bord</h1>
-                        <p>Qui monte à bord</p>
-                        <Link href="https://blog.quimonteabord.com">Blog</Link>
+                        <Motion.p {...variants('down', 0.2)}>
+                            Qui monte à bord
+                        </Motion.p>
+                        <Motion.h1 {...variants('', 0.1)}>
+                            Qui monte à bord
+                        </Motion.h1>
+                        <Motion.p {...variants('up', 0.2)}>
+                            Qui monte à bord
+                        </Motion.p>
+                        <Motion.span {...variants('', 0.9)}>
+                            <Link href="https://blog.quimonteabord.com">
+                                Blog
+                            </Link>
+                        </Motion.span>
                     </div>
-                    <div className={Styles.heroImgBox}>
+                    <Motion.div
+                        {...variants('left', 0.3)}
+                        className={Styles.heroImgBox}
+                    >
                         <Image
                             src={Hero}
                             alt="People writing on board"
@@ -24,22 +47,28 @@ export default function Home() {
                             height={300}
                             priority
                         />
-                    </div>
+                    </Motion.div>
                 </div>
             </header>
             <section className={Styles.blogSection}>
                 <div className={Styles.blogBox}>
                     <div className={Styles.grid1}>
-                        <h2>Blog</h2>
-                        <div className={Styles.line}></div>
-                        <p>
+                        <Motion.h2 {...variants('right', 0.3)}>Blog</Motion.h2>
+                        <Motion.div
+                            {...variants('right', 0.5)}
+                            className={Styles.line}
+                        ></Motion.div>
+                        <Motion.p {...variants('right', 0.6)}>
                             &quot;Naviguer dans les eaux de Qui monte à bord est
                             une expérience inoubliable. Un blog qui me pousse à
                             explorer des horizons nouveaux et à partager mes
                             histoires avec une communauté passionnée.&quot;
-                        </p>
+                        </Motion.p>
                     </div>
-                    <div className={Styles.grid2}>
+                    <Motion.div
+                        {...variants('left', 0.4)}
+                        className={Styles.grid2}
+                    >
                         <p>
                             Notre blog est né de la passion pour
                             l&apos;écriture, l&apos;échange d&apos;idées et le
@@ -57,8 +86,11 @@ export default function Home() {
                             l&apos;imagination est la boussole et les mots, les
                             voiles.
                         </p>
-                    </div>
-                    <div className={Styles.grid3}>
+                    </Motion.div>
+                    <Motion.div
+                        {...variants('left', 0.5)}
+                        className={Styles.grid3}
+                    >
                         <p>
                             Fais partie de cette belle aventure où les histoires
                             se tissent, les idées prennent vie. Nous sommes
@@ -69,19 +101,25 @@ export default function Home() {
                         <div className={Styles.imgBox}>
                             <Image src={Blog} alt="Person passing sheet" fill />
                         </div>
-                    </div>
+                    </Motion.div>
                 </div>
             </section>
             <section className={Styles.commuSection}>
                 <div className={Styles.commuBox}>
-                    <div className={Styles.imgBox}>
+                    <Motion.div
+                        {...variants('right', 0.3)}
+                        className={Styles.imgBox}
+                    >
                         <Image
                             src={Commu}
                             alt="People talking to each other"
                             fill
                         />
-                    </div>
-                    <div className={Styles.textBox}>
+                    </Motion.div>
+                    <Motion.div
+                        {...variants('left', 0.4)}
+                        className={Styles.textBox}
+                    >
                         <h2>
                             Rejoins la communauté pour explorer ensemble les
                             horizons infinis des mots.
@@ -93,7 +131,7 @@ export default function Home() {
                             chaque commentaire et des découvertes enchanteresses
                             émergeront de chaque article.
                         </p>
-                    </div>
+                    </Motion.div>
                 </div>
             </section>
         </>

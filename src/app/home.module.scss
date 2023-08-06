@@ -1,5 +1,12 @@
 .header {
-    background-color: #74c69d;
+    // background-color: #74c69d;
+    background: linear-gradient(
+            to right,
+            rgba(101, 101, 101, 0.4),
+            rgba(101, 101, 101, 0.2)
+        ),
+        url('../img/hero_bg.webp');
+    background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,7 +22,7 @@
                 font-size: 7.2rem;
                 font-weight: bold;
                 -webkit-text-fill-color: rgba(255, 0, 0, 0);
-                -webkit-text-stroke: 1px rgba(27, 67, 50, 0.1);
+                -webkit-text-stroke: 1px rgba(27, 67, 50, 0.6);
                 letter-spacing: 2px;
             }
             h1:nth-child(2) {
@@ -23,12 +30,13 @@
                 font-weight: bold;
                 letter-spacing: 2px;
                 color: #1b4332;
+                // color: #a9c7ea;
             }
             p:nth-child(3) {
                 font-size: 7.2rem;
                 font-weight: bold;
                 -webkit-text-fill-color: rgba(255, 0, 0, 0);
-                -webkit-text-stroke: 1px rgba(27, 67, 50, 0.1);
+                -webkit-text-stroke: 1px rgba(27, 67, 50, 0.6);
                 letter-spacing: 2px;
                 margin-bottom: 3rem;
             }
