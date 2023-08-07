@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description:
         'Chaque page est un voyage onirique, chaque paragraphe est une mélodie enchanteresse qui caresse ton âme...',
     verification: {
-        google: 'google-site-verification=8SgjsZuvo2mUT3hX9vaKhoUvddOwJugdQc8E8YfiWq4',
+        google: '8SgjsZuvo2mUT3hX9vaKhoUvddOwJugdQc8E8YfiWq4',
     },
     alternates: {
         canonical: 'https://quimonteabord.com',
