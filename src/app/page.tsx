@@ -191,13 +191,19 @@ function Footer() {
                     </li>
                 </ul>
                 <div className="social">
-                    <Link href="https://web.facebook.com/profile.php?id=100091865442401">
+                    <Link
+                        href="https://web.facebook.com/profile.php?id=100091865442401"
+                        aria-label="facebook"
+                    >
                         <RiFacebookCircleLine className="icon" />
                     </Link>
-                    <Link href="https://www.instagram.com/mesarah16/?hl=fr">
+                    <Link
+                        href="https://www.instagram.com/mesarah16/?hl=fr"
+                        aria-label="instagram"
+                    >
                         <BsInstagram className="icon" />
                     </Link>
-                    <Link href="/">
+                    <Link href="/" aria-label="twitter">
                         <RiTwitterXFill className="icon" />
                     </Link>
                 </div>
