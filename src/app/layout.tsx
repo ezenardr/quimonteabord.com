@@ -1,22 +1,14 @@
-import { Source_Serif_4 } from 'next/font/google';
-import Footer from '@/components/Footer';
-import './globals.scss';
-import { Metadata } from 'next';
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-const source_Serif_4 = Source_Serif_4({
-    subsets: ['latin'],
-    weight: ['400', '600', '700'],
-    display: 'swap',
-    variable: '--font-primary',
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Accueil | Qui monte à bord',
+    title: 'Accueil | Qui Monte à bord',
     description:
-        'Chaque page est un voyage onirique, chaque paragraphe est une mélodie enchanteresse qui caresse ton âme...',
-    verification: {
-        google: '8SgjsZuvo2mUT3hX9vaKhoUvddOwJugdQc8E8YfiWq4',
-    },
+        'Célébrons le pouvoir des mots pour inspirer, émouvoir et transformer',
+    metadataBase: new URL('https://quimonteabord.com'),
     alternates: {
         canonical: 'https://quimonteabord.com',
     },
@@ -29,10 +21,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="fr">
-            <body className={source_Serif_4.className}>
-                {children}
-                <Footer />
-            </body>
+            <body className={inter.className}>{children}</body>
         </html>
     );
 }
