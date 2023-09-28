@@ -35,7 +35,7 @@ header h1 {
     position: relative;
     width: 100%;
     height: 540px;
-    background-image: url('../img/blog-preview.jpg');
+    background-image: url('../img/blog-preview.webp');
     background-size: cover;
 }
 .preview-article {
