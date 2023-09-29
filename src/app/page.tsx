@@ -109,12 +109,12 @@ function AboutSection() {
             <motion.div {...variants('right', 0)} className="about-text-box">
                 <p className="about-title">A Propos du blog</p>
                 <p className="about-text body-text">
-                    Notre blog est né de la passion pour l&apos;écriture,
+                    Le blog est né de la passion pour l&apos;écriture,
                     l&apos;échange d&apos;idées et le désir de créer une
                     communauté vibrante. Que tu sois un voyageur de
-                    l&apos;écriture ou un explorateur en herbe, notre navire
-                    littéraire t&apos;invite à prendre part à un périple où
-                    l&apos;imagination est la boussole et les mots, les voiles.
+                    l&apos;écriture ou un explorateur en herbe, j&apos;invite à
+                    prendre part à un périple où l&apos;imagination est la
+                    boussole et les mots, les voiles.
                 </p>
                 <div className="about-cta">
                     {/* btn should point to blog, login or something else */}
@@ -142,13 +142,9 @@ function AuthorSection() {
             ></motion.div>
             <motion.div {...variants('up', 0)} className="author-text-box">
                 <p className="author-text">
-                    &quot;Ensemble, nous écrivons les chapitres les plus
-                    éblouissants de cette histoire littéraire. Votre passion,
-                    votre engagement et votre talent sont la véritable essence
-                    de
-                    <span className="text-acccent"> Qui monte à bord</span>, et
-                    je suis honorée de faire partie de cette aventure avec
-                    vous.&quot;
+                    &quot;Bienvenue à vous qui souhaitez embarquer avec moi dans
+                    l&apos;aventure qu&apos;est l&apos;écriture. Puisse ce
+                    voyage, vous procure le plus grand plaisir.&quot;
                 </p>
                 <p className="author">Messara Ezenard</p>
                 <p className="author-role">Auteur</p>
